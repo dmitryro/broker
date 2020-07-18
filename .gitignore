@@ -1,0 +1,9 @@
+*.egg-info*
+*.swp
+.swp
+static
+media
+node_modules
+.pyc
+*.pyc
+*.log
