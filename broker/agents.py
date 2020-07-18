@@ -1,7 +1,7 @@
 import faust
 import logging
-from models import Question
-from app import app, ship_topic
+from broker.models import Question
+from broker.app import app, ship_topic
 
 logger = logging.getLogger(__name__)
 
