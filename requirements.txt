@@ -1,0 +1,6 @@
+faust
+faust[eventlet]
+simple-settings
+tox
+pytest
+pytest-asyncio

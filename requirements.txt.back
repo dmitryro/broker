@@ -1,0 +1,8 @@
+faust
+#mode
+#gevent
+simple-settings
+tox
+pytest
+pytest-asyncio
+#-e git+git://github.com/2mf/aiogevent.git#egg=aiogevent
