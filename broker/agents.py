@@ -17,6 +17,6 @@ async def process_answers(questions):
                         question=question.text, 
                         answer=answer_text)
         answers.append(answer)
-
     logger.info(f"I DID MY BEST AND I ANSWERED {question.text} by {question.slack_id}")
     ship_topic.send(value=answers)
+    yield answers

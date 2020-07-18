@@ -3,6 +3,8 @@
 .swp
 static
 media
+build
+dist
 node_modules
 .pyc
 *.pyc
