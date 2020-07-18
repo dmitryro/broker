@@ -1,7 +1,7 @@
 from faust import App
 import faust
 import os
-from settings import KAFKA_BROKER
+from broker.settings import KAFKA_BROKER
 
 app = App('ship-app', broker=KAFKA_BROKER, store='memory://', autodiscover=True)
 #app = App(
