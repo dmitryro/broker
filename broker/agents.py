@@ -9,7 +9,7 @@ answers_table = app.Table('answers_table', default=Answer)
 async def process_answers(questions):
     answers = []
     anser_text = "our answer to "
-    async for question in questions.group_by(Questionw.id):
+    async for question in questions.group_by(Question.id):
         answer = Answer(id=1, question_id=question.id, 
                         slack_id=question.slack_id, 
                         question=question.text, 
