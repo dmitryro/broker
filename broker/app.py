@@ -10,7 +10,7 @@ import os
 
 logger = logging.getLogger(__name__)
 app = App('ship-app', stream_wait_empty=False, broker=KAFKA_BROKER, store='memory://', autodiscover=True)
-answers_table = app.Table('answers_table', default=Answer)
+answer_table = app.Table('answers_table', default=Answer)
 ship_topic = app.topic('ship-topic', value_type=str, internal=True)
 
 
@@ -25,6 +25,6 @@ async def process_answers(questions):
                         slack_id=question.slack_id,
                         question=question.text,
                         answer=answer_text+f" - {question.slack_id} {question.text}")
-        answers_table[question.id]=answer
+        answer_table[question.id]=answer
         logger.info(f"Question received. Question Id {question.id}")
         yield question
