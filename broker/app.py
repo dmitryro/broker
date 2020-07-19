@@ -1,11 +1,12 @@
-import logging
 import aiotools
 import asyncio
+import faust
 from faust import App
 from faust.worker import Worker
-import faust
-import os
+from broker.models import Answer, Question
 from broker.settings import KAFKA_BROKER
+import logging
+import os
 
 logger = logging.getLogger(__name__)
 app = App('ship-app', stream_wait_empty=False, broker=KAFKA_BROKER, store='memory://', autodiscover=True)
