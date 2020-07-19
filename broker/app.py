@@ -1,3 +1,4 @@
+import logging
 import aiotools
 import asyncio
 from faust import App
