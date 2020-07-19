@@ -1,5 +1,5 @@
 import logging
-from broker.models import Answer
+from broker.models import Answer, Question
 from broker.app import app, ship_topic
 
 logger = logging.getLogger(__name__)
