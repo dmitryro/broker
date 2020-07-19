@@ -1,3 +1,4 @@
+aiotools
 faust
 faust[eventlet]
 simple-settings
